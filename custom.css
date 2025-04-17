@@ -1,5 +1,5 @@
 :root {
-    --asscentColor: #88888888;
+    --asscentColor: hsla(180, 100%, 70%, 0.8);
     --corners: linear-gradient(to right, var(--asscentColor) 2px, transparent 2px) 0
       100%,
         linear-gradient(to left, var(--asscentColor) 2px, transparent 2px) 100% 100%,
@@ -33,6 +33,7 @@
 }
 * {
     font-family: gamefont;
+    transition: all 0.3s ease;
 }
 
 
@@ -97,11 +98,6 @@
       transform: scale(1) translate(0, 0);
     }
 }
-
-/* @-webkit-keyframes animate{
-    to {transform:translateY(30%);}
-    
-} */
 
 /* Transparent */
 .box,
@@ -330,16 +326,7 @@
 .left-icons .icon-btn:hover {
     border-top: transparent !important;
 }
-/* Top Icons
-.left-icons {
-    display: flex !important;
-    flex-direction: row !important;
-    position: absolute !important;
-    height: 0% !important;
-    margin: 20%;
-    margin-top: -3% !important;
-    border: none !important;
-}*/
+
 
 /* Removed Profile Card */
 .avatar-info,
@@ -762,6 +749,11 @@ div#join-btn.text {
     background: transparent !important;
     backdrop-filter: blur(15px);
     box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 40px;
 }
 
 .champions-list {
@@ -967,10 +959,6 @@ div#join-btn.text {
     padding-right: 0.75rem;
 }
 
-/*.player-list .list-value {
-    color: var(--accent);
-}*/
-
 .player-list .player-cont {
     background: var(--dark-transparent) !important;
     border-radius: 0.25rem;
@@ -1127,7 +1115,7 @@ div#join-btn.text {
 }
 
 .endurance-progress {   
-    background: linear-gradient(to right, #dedede, #212121) !important;
+    background: linear-gradient(to right, #3a3a3a, #212121) !important;
 }
 
 
@@ -1174,7 +1162,7 @@ div#join-btn.text {
 
 .esc-interface .head-right button:hover {
     background: transparent !important;
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid rgb(75, 75, 75);
 }
 
 .esc-interface .left-container .player {
@@ -1220,7 +1208,7 @@ div#dailyQuests {
 }
 .interface .select-regions-cont {
     background: transparent;
-    border: rgb(255, 255, 255);
+    border: rgb(76, 76, 76);
     bottom: 270px;
     
 }
@@ -1312,12 +1300,6 @@ border-left: none !important;
 display: none !important;
 }
 
-.container {
-background: transparent !important;
-backdrop-filter: blur(5px);
-box-shadow: none !important;
-}
-
 .champions-list {
 box-shadow: none !important;
 }
@@ -1339,8 +1321,6 @@ box-shadow: none !important;
     display: flex !important;
     visibility: visible !important;
 }
-
-
 
 /*  Player Position  */
 #team-section > div.player-cont {
@@ -1370,48 +1350,13 @@ box-shadow: none !important;
     margin-right: 0rem;
     margin-top: 5rem;
 }
-/* Blue Hitmarker */
-/*.hitmark {
-    content: url(https://images.squarespace-cdn.com/content/v1/61964757774f182c0b42e8db/1638494307585-6SAKKHKL3ZNINAZC84EA/x.png);
-    
-    
-}*/
-/*Grey/black Hitmarker*/
-/*.hitmark {
-    content: url(https://media.discordapp.net/attachments/856315166126506026/958443094506864750/406-4067418_image-hitmarker-png-battle-call-of-duty-png_ccexpress.png?width=719&height=438&ex=669379f0&is=66922870&hm=5129329f11afad78be3f3c13c9a147c1801dc2feb9e510f216e3277fd69b49c3&);
-    
-    
-}*/
 /*Small White Hitmarker*/
-/*.hitmark {
+.hitmark {
     height: 1.1rem;
     content: url(https://i.imgur.com/WKdlK4z.png);
     z-index: 1;
     
-}*/
-/*Big White hitmarker*/
-.hitmark {
-    height: 230px;
-    content: url(https://i.imgur.com/gFiptJW.png);
-    z-index: 1;
-    
 }
-/*https://i.imgur.com/ny3U4BI.png    WHITE HITMARKER: https://i.imgur.com/gFiptJW.png RED HITMARKER: https://i.imgur.com/TduHFBI.png*/
-/* crosshair: https://i.imgur.com/FbVEWQC.png /*
-
-/* Kill Image/Indicator */
-/*.animate-cont {
-    content: url(https://static.wixstatic.com/media/e00165_ed25fd1d6bef4a0db753ae1f7b64ef6a~mv2.png);
-    height: 100px;
-    text-align: center;
-    display: inline-block;
-}*/
-/*.animate-cont {
-    content: url(https://media.discordapp.net/attachments/523517791886770188/956029712470253598/PikPng.com_roblox-head-png_965768.png?width=160&height=160&ex=6693eccd&is=66929b4d&hm=6a048495b7911291519400c516c876ae13ed7fdd642e1944f74ca3407e46a3db&);
-    height: 160px;
-    text-align: center;
-    display: inline-block;
-}*/
 /*Kill text thing*/
 .ach-cont { 
     top: 0 !important; 
@@ -1436,7 +1381,7 @@ box-shadow: none !important;
     margin-left: 15rem !important; 
 } 
 .animate-cont>.text>span>span { 
-    color: white !important;
+    color: rgb(72, 72, 72) !important;
 }
 
 
@@ -1502,15 +1447,6 @@ box-shadow: none !important;
 .select-mod:hover {
     transform: scale(1.2);
 }
-
-/*.team-section {
-    top: 14rem;
-    left: -10rem;
-}
-.invite-btn {
-    top: 14rem;
-    left: -10rem;
-}*/
 
 .team-section {
     top: 60px;
